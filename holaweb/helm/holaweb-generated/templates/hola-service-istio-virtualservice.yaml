@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  creationTimestamp: null
+  name: hola-service
+spec:
+  gateways:
+  - public-gateway.istio-system
+  - mesh
+  hosts:
+  - hola-service.hola-app-dev.svc.cluster.local
+  - hola-service
+  http:
+  - route:
+    - destination:
+        host: hola-service.hola-app-dev.svc.cluster.local
