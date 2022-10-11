@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hola-app
+  name: holaapp
 spec:
   replicas: {{ .Values.replicaCount }}
   strategy:
