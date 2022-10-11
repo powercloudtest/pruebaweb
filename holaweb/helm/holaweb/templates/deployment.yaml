@@ -42,8 +42,8 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: "metadata.labels['deployment']"
-        - name: CONTAINER_IMAGE
-          value: "{{ .Values.image }}"
+        #- name: CONTAINER_IMAGE
+          #value: "{{ .Values.image }}"
         - name: KEPTN_PROJECT
           value: "{{ .Chart.Name }}"
         - name: KEPTN_STAGE
@@ -51,7 +51,7 @@ spec:
             fieldRef:
               fieldPath: "metadata.namespace"
         - name: KEPTN_SERVICE
-          value: "carts"
+          value: "holaweb"
         - name: UNLEASH_SERVER_URL
           value: "http://unleash.unleash-dev/api"
         livenessProbe:
