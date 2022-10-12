@@ -60,7 +60,7 @@ spec:
         - name: DT_REALESE_VERSION
           valueFrom:
             fieldRef:
-              fieldPath: [metadata.labels['app.kubernetes.io/version']
+              fieldPath: metadata.labels['app.kubernetes.io/version']
         livenessProbe:
           httpGet:
             path: /
