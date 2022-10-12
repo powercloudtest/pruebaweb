@@ -7,10 +7,10 @@ attachRules:
   tags:
     - context: CONTEXTLESS
       key: keptn_project
-      value: $PROJECT
+      value: hola-app
     - context: CONTEXTLESS
       key: keptn_stage
-      value: $STAGE
+      value: dev
     - context: CONTEXTLESS
       key: keptn_service
-      value: $SERVICE
+      value: holaweb
