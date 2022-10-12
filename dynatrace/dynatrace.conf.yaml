@@ -3,8 +3,14 @@ dtCreds: dynatrace
 attachRules:
   tagRule:
   - meTypes:
-    - SERVICE
-    tags:
+  - SERVICE
+  tags:
+    - context: CONTEXTLESS
+      key: keptn_project
+      value: $PROJECT
+    - context: CONTEXTLESS
+      key: keptn_stage
+      value: $STAGE
     - context: CONTEXTLESS
       key: keptn_service
-      value: holaweb
+      value: $SERVICE
