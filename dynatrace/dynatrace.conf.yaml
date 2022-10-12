@@ -1,10 +1,11 @@
+---
 spec_version: '0.1.0'
 dtCreds: dynatrace
 attachRules:
   tagRule:
   - meTypes:
-  - SERVICE
-  tags:
+    - SERVICE
+    tags:
     - context: CONTEXTLESS
       key: keptn_project
       value: hola-app
