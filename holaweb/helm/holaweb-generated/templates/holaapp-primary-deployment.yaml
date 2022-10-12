@@ -22,12 +22,14 @@ spec:
         app.kubernetes.io/managed-by: Keptn
         app.kubernetes.io/name: holaweb-primary
         app.kubernetes.io/part-of: hola-app
-        app.kubernetes.io/version: 0.1.0
+        app.kubernetes.io/priority: high
+        app.kubernetes.io/tier: frontend
+        app.kubernetes.io/version: 0.2.0
     spec:
       containers:
       - env:
         - name: DT_CUSTOM_PROP
-          value: version=0.1.0 revision=5 releasename=hola-app-staging-holaweb keptn_project=hola-app
+          value: version=0.1.0 revision=7 releasename=hola-app-staging-holaweb keptn_project=hola-app
             keptn_service=holaweb keptn_stage=staging keptn_deployment=primary
         - name: POD_NAME
           valueFrom:
@@ -47,6 +49,10 @@ spec:
           value: holaweb
         - name: UNLEASH_SERVER_URL
           value: http://unleash.unleash-dev/api
+        - name: DT_REALESE_VERSION
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.labels['app.kubernetes.io/version']
         image: 10.250.1.101:5000/hello-world-nodejs
         imagePullPolicy: IfNotPresent
         livenessProbe:
