@@ -93,4 +93,4 @@ spec:
             - name: "evaluation"
               triggeredAfter: "15m"
               properties:
-                timeframe: "480m"
+                timeframe: "5m"
